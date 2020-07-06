@@ -14,13 +14,13 @@ class EmojiListViewController : UIViewController, UITableViewDataSource, UITable
     var emojis = ["🤠", "🥰", "🤮", "🤮", "🤑", "💩"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.emojis.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.backgroundColor = UIColor.red
-        cell.textLabel!.text = "🥳"
+        cell.textLabel!.text = self.emojis[indexPath.row]
         return cell
     }
     
