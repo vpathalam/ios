@@ -11,7 +11,9 @@ import UIKit
 
 class EmojiListViewController : UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var emojis = ["🤠", "🥰", "🤮", "🤮", "🤑", "💩"]
+    var emojis = ["🤠", "🥰", "🤮", "🤑", "💩"]
+    
+    var emoji = "💩"
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.emojis.count
@@ -19,7 +21,7 @@ class EmojiListViewController : UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.backgroundColor = UIColor.red
+        cell.backgroundColor = UIColor.darkGray
         cell.textLabel!.text = self.emojis[indexPath.row]
         return cell
     }
@@ -33,7 +35,13 @@ class EmojiListViewController : UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.emoji = self.emojis[indexPath.row]
         self.performSegue(withIdentifier: "tableViewToEmojiSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailViewController = segue.destination as! EmojiDetailViewController
+        detailViewController.emoji = self.emoji
     }
     
 }

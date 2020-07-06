@@ -14,6 +14,7 @@
 		C32E405424A3D95800E8B0B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C32E405324A3D95800E8B0B5 /* Assets.xcassets */; };
 		C32E405724A3D95800E8B0B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C32E405524A3D95800E8B0B5 /* LaunchScreen.storyboard */; };
 		C32E405F24A3DEF800E8B0B5 /* EmojiListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32E405E24A3DEF800E8B0B5 /* EmojiListViewController.swift */; };
+		C360D9FA24B391FF00D70E37 /* EmojiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C360D9F924B391FF00D70E37 /* EmojiDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		C32E405624A3D95800E8B0B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C32E405824A3D95800E8B0B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C32E405E24A3DEF800E8B0B5 /* EmojiListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiListViewController.swift; sourceTree = "<group>"; };
+		C360D9F924B391FF00D70E37 /* EmojiDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				C32E404A24A3D95200E8B0B5 /* AppDelegate.swift */,
 				C32E405E24A3DEF800E8B0B5 /* EmojiListViewController.swift */,
+				C360D9F924B391FF00D70E37 /* EmojiDetailViewController.swift */,
 				C32E404C24A3D95200E8B0B5 /* SceneDelegate.swift */,
 				C32E404E24A3D95200E8B0B5 /* ViewController.swift */,
 				C32E405024A3D95200E8B0B5 /* Main.storyboard */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C32E404F24A3D95200E8B0B5 /* ViewController.swift in Sources */,
+				C360D9FA24B391FF00D70E37 /* EmojiDetailViewController.swift in Sources */,
 				C32E404B24A3D95200E8B0B5 /* AppDelegate.swift in Sources */,
 				C32E404D24A3D95200E8B0B5 /* SceneDelegate.swift in Sources */,
 				C32E405F24A3DEF800E8B0B5 /* EmojiListViewController.swift in Sources */,

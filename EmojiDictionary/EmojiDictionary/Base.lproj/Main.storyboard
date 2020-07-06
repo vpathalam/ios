@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Emoji List View Controller-->
+        <!--Emoji Dictionary-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="EmojiListViewController" customModule="EmojiDictionary" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,16 +15,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="znY-mV-NiK">
-                                <rect key="frame" x="16" y="20" width="343" height="627"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="znY-mV-NiK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="znY-mV-NiK" secondAttribute="trailing" id="225-Xj-7oP"/>
+                            <constraint firstItem="znY-mV-NiK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ky8-Xb-yG4"/>
+                            <constraint firstItem="znY-mV-NiK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YvO-5M-dua"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="znY-mV-NiK" secondAttribute="bottom" id="aOQ-lJ-aUz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="i2x-8h-xyP"/>
+                    <navigationItem key="navigationItem" title="Emoji Dictionary" id="i2x-8h-xyP"/>
                     <connections>
                         <outlet property="tableView" destination="znY-mV-NiK" id="2hG-8d-w75"/>
                         <segue destination="a8a-cS-6Yz" kind="show" identifier="tableViewToEmojiSegue" id="8VE-LT-bZQ"/>
@@ -50,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="-798" y="117"/>
         </scene>
-        <!--View Controller-->
+        <!--Emoji Detail View Controller-->
         <scene sceneID="YwJ-FW-m5b">
             <objects>
-                <viewController id="a8a-cS-6Yz" sceneMemberID="viewController">
+                <viewController id="a8a-cS-6Yz" customClass="EmojiDetailViewController" customModule="EmojiDictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p6v-YQ-fGc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,6 +94,10 @@
                         <viewLayoutGuide key="safeArea" id="I6H-xe-gZc"/>
                     </view>
                     <navigationItem key="navigationItem" id="Pyq-ij-SCy"/>
+                    <connections>
+                        <outlet property="emojiDefinition" destination="iOR-KQ-5Bl" id="Dgu-Ys-6nJ"/>
+                        <outlet property="emojiLabel" destination="Ihs-CJ-s31" id="WOX-Do-4Qk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ct8-M6-gUQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
