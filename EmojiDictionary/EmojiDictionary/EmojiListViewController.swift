@@ -32,6 +32,8 @@ class EmojiListViewController : UIViewController, UITableViewDataSource, UITable
         self.tableView.delegate = self
     }
     
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "tableViewToEmojiSegue", sender: self)
+    }
     
 }
