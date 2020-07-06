@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RZZ-sz-v7t">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -24,25 +24,42 @@
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="i2x-8h-xyP"/>
                     <connections>
                         <outlet property="tableView" destination="znY-mV-NiK" id="2hG-8d-w75"/>
-                        <segue destination="a8a-cS-6Yz" kind="presentation" identifier="tableViewToEmojiSegue" id="8VE-LT-bZQ"/>
+                        <segue destination="a8a-cS-6Yz" kind="show" identifier="tableViewToEmojiSegue" id="8VE-LT-bZQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="161" y="118"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8ms-kd-HW7">
+            <objects>
+                <navigationController id="RZZ-sz-v7t" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tow-rq-ztP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YOj-UE-Cgz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EGN-vn-1vk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-798" y="117"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="YwJ-FW-m5b">
             <objects>
                 <viewController id="a8a-cS-6Yz" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p6v-YQ-fGc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the Emoji Definition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOR-KQ-5Bl">
-                                <rect key="frame" x="10" y="576" width="355" height="21"/>
+                                <rect key="frame" x="10" y="596" width="355" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="kpa-7H-TnE"/>
                                 </constraints>
@@ -51,7 +68,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤠" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihs-CJ-s31">
-                                <rect key="frame" x="10" y="50" width="355" height="210"/>
+                                <rect key="frame" x="10" y="94" width="355" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="Vor-Sr-hit"/>
                                 </constraints>
@@ -71,6 +88,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="I6H-xe-gZc"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Pyq-ij-SCy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ct8-M6-gUQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
